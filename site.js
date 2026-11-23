@@ -16,6 +16,14 @@ document.addEventListener('click',function(e){if(!m.contains(e.target)){setOpen(
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false)}});
 }
 
+var rv=document.querySelectorAll('.rv');
+if(rv.length){
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12});
+rv.forEach(function(el){io.observe(el)});
+}else{rv.forEach(function(el){el.classList.add('in')})}
+}
+
 var f=document.getElementById('enquiry');
 if(f){f.addEventListener('submit',function(e){e.preventDefault();
 var d=new FormData(f),g=function(k){return (d.get(k)||'').toString().trim()};
