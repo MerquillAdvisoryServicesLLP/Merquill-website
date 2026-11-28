@@ -176,3 +176,12 @@ nav .mega .mega-strip a.mega-link{color:var(--gold-lt)}
 @media print{.callfab{display:none}}
 
 .cta2 select{font-size:.9rem;padding-right:6px}
+
+/* Grievance officer band */
+.griev{background:var(--navy-2);color:#fff;padding:34px 0 38px}
+.griev .eyebrow{color:var(--gold-lt);letter-spacing:.16em;font-size:.75rem;font-weight:700;text-transform:uppercase}
+.griev p{color:rgba(255,255,255,.75);margin:8px 0 18px;max-width:560px}
+.griev-row{display:flex;flex-wrap:wrap;gap:14px 28px}
+.griev-row .gi{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-size:1rem}
+.griev-row .gi .gic{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;color:var(--gold-lt);flex:none}
+.griev-row a.gi:hover span.t{text-decoration:underline}
